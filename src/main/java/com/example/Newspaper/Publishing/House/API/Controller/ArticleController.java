@@ -6,11 +6,10 @@ import com.example.Newspaper.Publishing.House.API.ResponseObjects.GetArticleResp
 import com.example.Newspaper.Publishing.House.API.Service.ArticleService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.List;
 
@@ -33,6 +32,13 @@ public void saveArticle(@RequestBody Article article) {
     public GetArticleResponse createArticle (@PathVariable Long articleId) {
         return articleService.getArticleById(articleId);
     }
+    @DeleteMapping("article/{articleId}")
+    public void deleteArticle(@PathVariable Long articleId) {
+       articleService.deleteArticleById(articleId);
+    }
+
+
+
     public void createArticle(GetArticleRequstObject articleRequestObject) {
 
         Article article=new Article();
