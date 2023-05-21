@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @Data
 @Entity
-public class User {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
