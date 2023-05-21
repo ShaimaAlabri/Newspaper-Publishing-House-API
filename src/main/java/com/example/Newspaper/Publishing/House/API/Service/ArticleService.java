@@ -22,9 +22,9 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
-    public GetArticleResponse getArticleById(Long article) {
-        Optional<Article> optionalEmployee =  articleRepository.findById(articleId);
-        if(!optionalEmployee.isEmpty())
+    public GetArticleResponse getArticleById(Long articleId) {
+        Optional<Article> optionalArticle =  articleRepository.findById(articleId);
+        if(!optionalArticle.isEmpty())
         {
             Article article1 = optionalArticle.get();
 
