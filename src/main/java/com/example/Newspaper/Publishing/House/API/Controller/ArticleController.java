@@ -32,9 +32,15 @@ public void saveArticle(@RequestBody Article article) {
     public GetArticleResponse createArticle (@PathVariable Long articleId) {
         return articleService.getArticleById(articleId);
     }
+
     @DeleteMapping("article/{articleId}")
     public void deleteArticle(@PathVariable Long articleId) {
-       articleService.deleteArticleById(articleId);
+    try {
+        articleService.deleteArticleById(articleId);
+    }catch (Exception e){
+        e.printStackTrace();
+    }
+
     }
 
 
