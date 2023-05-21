@@ -29,8 +29,9 @@ public class ArticleService {
             Article article = optionalArticle.get();
 
 
-            GetArticleResponse getArticleResponse = new GetArticleResponse(article.getTitle(),article.getContent(),article.getAuthor(),article.getPublishDate());
-            return articleRepository;
+            GetArticleResponse articleResponse = new GetArticleResponse(article.getTitle(), article.getContent(), article.getAuthor(), article.getPublishDate());
+            return articleResponse;
+
         }
 
         return null;

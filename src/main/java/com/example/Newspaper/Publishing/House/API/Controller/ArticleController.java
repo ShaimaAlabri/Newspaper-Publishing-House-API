@@ -4,6 +4,7 @@ import com.example.Newspaper.Publishing.House.API.Models.Article;
 import com.example.Newspaper.Publishing.House.API.RequstObjects.GetArticleRequstObject;
 import com.example.Newspaper.Publishing.House.API.ResponseObjects.GetArticleResponse;
 import com.example.Newspaper.Publishing.House.API.Service.ArticleService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,7 +40,7 @@ public void saveArticle(@RequestBody Article article) {
         article.setTitle("New Movie Launching Soon");
         article.setContent("The trailer of the new movie will be launched soon");
         article.setAuthor("John Do");
-        article.setPublishDate(new Date(2023,06,0));
+        article.setPublishDate((Data) new Date(2023,06,0));
 
 
 
@@ -49,4 +50,4 @@ public void saveArticle(@RequestBody Article article) {
 
 }
 
-}
+
