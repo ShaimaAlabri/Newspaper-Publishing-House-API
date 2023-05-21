@@ -1,4 +1,5 @@
 package com.example.Newspaper.Publishing.House.API.Controller;
 
-public class CustomerControlle {
+public class ArticleController {
+
 }
