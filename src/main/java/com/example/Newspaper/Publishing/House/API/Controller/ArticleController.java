@@ -40,11 +40,11 @@ public void saveArticle(@RequestBody Article article) {
         article.setTitle(articleRequestObject.getTitle());
         article.setPublishDate(articleRequestObject.getPublishDate());
 
-        article.setTitle("New Movie Launching Soon");
-        article.setContent("The trailer of the new movie will be launched soon");
-        article.setAuthor("John Do");
+        article.setTitle("Weather Forecast for Next Week");
+        article.setContent("The weather will be sunny with occasional rainfal");
+        article.setAuthor("Jane Smith");
 //        article.setPublishDate((Data) new Date(2023,06,01));
-        article.setPublishDate("2023/06/01");
+        article.setPublishDate("2023/05/22");
 
 
 
