@@ -18,8 +18,9 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 @RequestMapping("article/create")
-    public void saveArticle (@RequestBody Long articleRequestObject){
-    createArticle(articleRequestObject);
+public void saveArticle(@RequestBody Article article) {
+    articleService.saveArticle(article);
+}
 
     @RequestMapping("article/get")
     public List<Article> getArticle() {
@@ -34,12 +35,12 @@ public class ArticleController {
     public void createArticle(GetArticleRequstObject articleRequestObject) {
 
         Article article=new Article();
+
         article.setTitle("New Movie Launching Soon");
-        article.getContent("The trailer of the new movie will be launched soon");
-
+        article.setContent("The trailer of the new movie will be launched soon");
         article.setAuthor("John Do");
+        article.setPublishDate(new Date(2023,06,0));
 
-        article.setPublishDate(2023-06-01);
 
 
 

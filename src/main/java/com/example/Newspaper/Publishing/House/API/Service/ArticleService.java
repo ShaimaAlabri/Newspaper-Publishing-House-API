@@ -26,10 +26,10 @@ public class ArticleService {
         Optional<Article> optionalArticle =  articleRepository.findById(articleId);
         if(!optionalArticle.isEmpty())
         {
-            Article article1 = optionalArticle.get();
+            Article article = optionalArticle.get();
 
 
-            GetArticleResponse getArticleResponse = new GetArticleResponse(article1.getTitle(),article1.getContent(),article1.getAuthor(),article1.getPublishDate());
+            GetArticleResponse getArticleResponse = new GetArticleResponse(article.getTitle(),article.getContent(),article.getAuthor(),article.getPublishDate());
             return articleRepository;
         }
 
