@@ -1,0 +1,1 @@
+"# Newspaper-Publishing-House-API" 
