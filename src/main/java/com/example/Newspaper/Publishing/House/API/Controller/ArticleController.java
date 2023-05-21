@@ -36,11 +36,16 @@ public void saveArticle(@RequestBody Article article) {
     public void createArticle(GetArticleRequstObject articleRequestObject) {
 
         Article article=new Article();
+        article.setAuthor(articleRequestObject.getAuthor());
+        article.setTitle(articleRequestObject.getTitle());
+        article.setPublishDate(articleRequestObject.getPublishDate());
 
         article.setTitle("New Movie Launching Soon");
         article.setContent("The trailer of the new movie will be launched soon");
         article.setAuthor("John Do");
-        article.setPublishDate((Data) new Date(2023,06,0));
+//        article.setPublishDate((Data) new Date(2023,06,01));
+        article.setPublishDate("2023/06/01");
+
 
 
 

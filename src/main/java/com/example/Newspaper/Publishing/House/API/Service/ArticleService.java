@@ -29,7 +29,7 @@ public class ArticleService {
             Article article = optionalArticle.get();
 
 
-            GetArticleResponse articleResponse = new GetArticleResponse(article.getTitle(), article.getContent(), article.getAuthor(), article.getPublishDate());
+            GetArticleResponse articleResponse = new GetArticleResponse(article.getTitle(), article.getContent(), article.getAuthor(),article.getPublishDate());
             return articleResponse;
 
         }

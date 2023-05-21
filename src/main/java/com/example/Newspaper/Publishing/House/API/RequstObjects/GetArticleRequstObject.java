@@ -9,6 +9,6 @@ import lombok.*;
 public class GetArticleRequstObject {
     String title;
     String author;
-    Data publishDate;
+    String publishDate;
 
 }

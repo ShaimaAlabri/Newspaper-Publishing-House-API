@@ -10,6 +10,6 @@ public class GetArticleResponse {
     String title;
     String content;
     String author;
-    Data publishDate;
+    String publishDate;
 
 }

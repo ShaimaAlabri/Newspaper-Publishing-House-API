@@ -20,6 +20,6 @@ public class Customer {
     Long id;
     String username;
     String password;
-    List<String> roles;
+//    List<String> roles;
 
 }
