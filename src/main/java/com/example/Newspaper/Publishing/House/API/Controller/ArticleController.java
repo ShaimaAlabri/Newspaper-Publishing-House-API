@@ -8,10 +8,15 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.persistence.Id;
+import java.net.URI;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
+
+
 
 @RestController
 public class ArticleController {
@@ -42,6 +47,10 @@ public void saveArticle(@RequestBody Article article) {
     }
 
     }
+    @PutMapping("article/put/{articleId}")
+    public void updateArticle(@RequestBody Article article) {
+        articleService.saveOrUpdate(article);
+    }
 
 
 
@@ -56,7 +65,7 @@ public void saveArticle(@RequestBody Article article) {
         article.setContent("The weather will be sunny with occasional rainfal");
         article.setAuthor("Jane Smith");
 //        article.setPublishDate((Data) new Date(2023,06,01));
-        article.setPublishDate("2023/05/22");
+        article.setPublishDate("2023/05/20");
 
 
 

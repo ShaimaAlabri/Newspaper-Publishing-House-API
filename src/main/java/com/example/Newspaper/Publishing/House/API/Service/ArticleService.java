@@ -42,5 +42,9 @@ public class ArticleService {
         articleRepository.deleteById(id);
     }
 
+    public void saveOrUpdate(Article article) {
+        articleRepository.save(article);
+    }
+
 
 }
