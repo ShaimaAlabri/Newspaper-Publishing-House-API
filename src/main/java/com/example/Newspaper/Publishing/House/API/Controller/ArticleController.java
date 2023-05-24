@@ -49,10 +49,19 @@ public void saveArticle(@RequestBody Article article) {
     }
     @PutMapping("article/put/{articleId}")
     public void updateArticle(@RequestBody Article article) {
+
         articleService.saveOrUpdate(article);
     }
 
-
+    @PutMapping("article/put/{articleId}")
+    public ResponseEntity<Article> updateArticle(@PathVariable Long id, @RequestBody Article updateData){
+        Article article = articleService.updateArticle(id, updateData);
+        if (article != null) {
+            return ResponseEntity.ok(article);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     public void createArticle(GetArticleRequstObject articleRequestObject) {
 

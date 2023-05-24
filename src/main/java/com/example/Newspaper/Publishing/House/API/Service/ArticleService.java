@@ -45,6 +45,18 @@ public class ArticleService {
     public void saveOrUpdate(Article article) {
         articleRepository.save(article);
     }
+    public Article updateArticle(Long id, Article updateData){
+        Article article = articleRepository.findById(id).orElse(null);
+        if (article != null) {
+            article.setAuthor(updateData.getAuthor());
+            article.setContent(updateData.getContent());
+            article.setTitle(updateData.getTitle());
+            article.setPublishDate(updateData.getPublishDate());
 
+
+            return articleRepository.save(article);
+        }
+        return null;
+    }
 
 }
